@@ -1,0 +1,72 @@
+LLM -> large language model 
+basically a text conmpletion software, tey can predict your next word basically , based on the data on the internet 
+LLM can do -> write an essay or write a database query 
+but cannot do -> email this essay or run a database query 
+
+
+Implementation 
+--->> Search Internet(tool) : perplexity is a tool which goes though the internet and search 
+
+--->> Edit code files (tool)
+
+Standard -> protocols 
+
+suppose humare pass ek client hai for example cursor ye client kya karte h MCP server se baat karte hai toh in server nai ek tool deisgn kiya ki jo aap prompt doge uss ke sath sath hum apki files bhi le jayenge and un files ke sath samjahnai ki kosish bhi karenge ki abhi tak project kesa hai and aap kya karna cha rahe ho uske andar  jese jo aap instructions doge use execute karnai ki bhi kosish karenge 
+for example : write a file , read from docs , read error from console 
+basically haar kaamm ke lia apna ek tool
+
+
+MCP SERVER ---->>> Model Context Protocol 
+deisgn by Anthropic 
+kabhi hota h ki koi model acha kaam karta h kabhi koi nai toh main baat ye h ki kisnai kitnai ache tools bnaye or kiske tool kesa kaam kar rahe h 
+
+model -> ai model 
+model : text , images , video 
+llms models like gpt, claude, gemini etc 
+hum chate h ki model kisi se bhi deal kar sake 
+
+
+
+contect -> most important for any llm
+ki kiss context mai baat ho rahi hai 
+like "fan" it may be fan or some artist or celing fan 
+jitna content doge utna acha predict hoga 
+
+for example we have a context : check if the error that i am getting is this repo is mentioned in any issue or being discussed in slack 
+
+first context : mcp server to get repo issue 
+need access to repo issues 
+repo ki issue ki list dedo fresh ekdam 
+
+second context : mcp server to get slack channel 
+need access to slack channel
+jo bhi channel hoga uska access dega 
+
+
+toh isko bolte h mcp server 
+ki hum ek or server bnayenge ek jo repo ka access dega and ek jo slack ka access dega 
+
+basically chote chote tools bnate h 
+
+
+
+protocols --->> set of rules
+reflection request : kis tarah se baat karna hai 
+
+tools : function hai jo kama karta hai 
+resources : mostly attachments (csv files) jo hum llms ko dedete h 
+sampling : way to quesry other models 
+example :mai claude use karna chati hu but claude testing files achi nahi deta toh vaha mai gemini use karna chati hu lekin redame file chatgpt se banvana chati hu toh mai open ai use karungi 
+prompts : tempelates for clients 
+prompt ko enhance karna 
+user ke tempelate ko elaborate kjarna 
+
+
+
+
+
+sabse pehle humare pass hota h ek client 
+client deal karta h mcp server se 
+mcp server pe hum do chez kar sakte h ek h server sent event anf ek hai message endpoint
+
+
